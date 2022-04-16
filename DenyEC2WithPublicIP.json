@@ -8,7 +8,7 @@
       "Condition": {
         "ForAnyValue:ArnNotEquals": {
           "ec2:Subnet": [
-            "arn:aws:ec2:*:*:subnet/subnet-*"
+            "arn:aws:ec2:*:*:subnet/subnet-11111111" #Public subnet you want to prevent the EC2 instance from running in
           ]
         }
       }
