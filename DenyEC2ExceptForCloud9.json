@@ -1,0 +1,15 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Deny",
+      "Action": "ec2:RunInstances",
+      "Resource": "*",
+      "Condition": {
+        "StringNotLike": {
+          "aws:PrincipalARN": "arn:aws:iam::*:role/aws-service-role/cloud9.amazonaws.com/AWSServiceRoleForAWSCloud9"
+        }
+      }
+    }
+  ]
+}
