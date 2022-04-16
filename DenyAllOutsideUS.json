@@ -1,0 +1,22 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "DenyAllOutsideUS",
+      "Effect": "Deny",
+      "NotAction": [
+        "iam:*",
+        "logs:*",
+        "cloudwatch:*"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringNotEquals": {
+          "aws:RequestedRegion": [
+            "us-east-1"
+          ]
+        }
+      }
+    }
+  ]
+}
