@@ -1,6 +1,7 @@
 # scp-examples
 A collection of AWS Service Control Policies (SCP)
 
+- [BlockAllbyAccount.json](BlockAllByAccount.json) - This SCP denies all actions in the set of accounts listed. This can deny a set of permissions in a set of accounts.
 - [DenyAllOutsideUS.json](DenyAllOutsideUS.json) - This SCP denies all activities outside the us-east-1 region. Note that IAM, Logs and CloudWatch are still allowed, as these are necessary so that Lambda@Edge (among other things) will work correctly.
 - [DenyEC2ExceptForCloud9.json](DenyEC2ExceptForCloud9.json) - This SCP allows you to deny running any EC2 except for EC2 that is running for Cloud9.
 - [DenyEC2WithPublicIP.json](DenyEC2WithPublicIP.json) - This SCP allows you to prevent the running of an EC2 instance in a public subnet. The ARN on line 11 should refer to the ARN of a subnet (or subnets) that are public.
